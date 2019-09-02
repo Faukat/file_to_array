@@ -18,10 +18,10 @@ int main(){
 	char **final;
 	// Contando o numero de linhas.
 	while(*pon != '\0'){
-		if(*pon == ';'){
+		if(*pon == '\n'){
 			nl++;
 			pcon = 0;
-			pon = pon + 2;
+			pon++;
 		}
 		else{
 			pcon++;
@@ -35,10 +35,10 @@ int main(){
 	int m1[nl];
 	// Contando cada linha.
 	while(*pon != '\0'){
-		if(*pon == ';'){
+		if(*pon == '\n'){
 			m1[nlt] = pcon;
 			pcon = 0;
-			pon = pon + 2;
+			pon++;
 			nlt++;
 		}
 		else{
@@ -51,7 +51,7 @@ int main(){
 	for(int i=0;i<nl;i++){printf("%i ", m1[i] );}
 	printf("\n");
 	//Alocando o tamanho de cada linha.
-	for(int i = 0; i<=nl;i++){
+	for(int i = 0; i<nl;i++){
 		final[i] = (char *)malloc( m1[i] * sizeof(char) + 1);
 	}
 	pon = cont;
@@ -60,9 +60,9 @@ int main(){
 	int conj = 0;
 	// Colocando o valor de cada char em seu respectivo lugar.
 	while(*pon != '\0'){
-		if(*pon == ';' ){
+		if(*pon == '\n' ){
 			final[coni][conj] = '\0';
-			pon = pon + 2;
+			pon++;
 			conj= 0;
 			coni++;
 		}
