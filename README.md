@@ -1,4 +1,6 @@
 # file_to_array
 Transforma cada linha de um arquivo em um array. 
 
-O codigo usa o char ';' como delimitador de cada linha, porem, com poucas alterações pode ser usado o '\n' no seu lugar. 
+Variação do código do master, onde este não fará uma série de laços para contar e alocar cada char. Este usará alocação dinamica, onde tudo será feito ao percorrer o arquivo. 
+
+Só tem funções de testes.  
